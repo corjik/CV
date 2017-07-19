@@ -53,8 +53,7 @@ function sendMessage() {
 
 //Добавление сообщения в localstorage и добавление строки в файл
 function addLocal(item) {
-  localStorage.setItem('message'+i, JSON.stringify(item));
-  i++
+  localStorage.setItem('message'+localStorage.length, JSON.stringify(item));
 
   let request = new XMLHttpRequest();
   request.open('POST', 'save.php',true);
